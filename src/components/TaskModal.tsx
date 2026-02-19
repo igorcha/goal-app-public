@@ -76,8 +76,6 @@ export default function TaskModal({ task, isOpen, onClose, onSave, onDelete, onM
                 (changes as any)[key] = editValues[key];
             }
         });
-        console.log('Changes:', changes);
-        console.log('Task:', task);
         if (Object.keys(changes).length === 0) {
             return;
         }

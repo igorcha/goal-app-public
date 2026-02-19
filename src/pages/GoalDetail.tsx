@@ -106,7 +106,6 @@ export default function GoalDetail() {
     const handleTaskDelete = (taskId: string) => {
         // TODO: Implement delete functionality
         deleteTask(taskId);
-        console.log('Deleting task:', taskId);
         handleModalClose();
     };
 
@@ -127,8 +126,6 @@ export default function GoalDetail() {
     };
 
     const handleAddTaskSubmit = () => {
-        // TODO: Implement API call to add task
-        console.log('Adding task:', { taskText: newTaskText, deadline: newTaskDeadline });
         const order = sortedTasks.length > 0 ? sortedTasks[sortedTasks.length - 1].order + 1000.0 : 1000.0;
         addTask({
             taskText: newTaskText,
