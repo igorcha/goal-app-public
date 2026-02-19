@@ -1,0 +1,250 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "goalProcessorAPI",
+    "version" : "2025-11-30 20:43:50UTC"
+  },
+  "servers" : [ {
+    "url" : "https://8ngxqqzrpc.execute-api.us-east-2.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : "dev"
+      }
+    }
+  } ],
+  "paths" : {
+    "/deleteGoal" : {
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /deleteGoal"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:deleteGoal/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/goals" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /goals"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:getUserGoals/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/tasks" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /tasks"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:getTasks/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/editTask" : {
+      "patch" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PATCH /editTask"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:editTask/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/markTask" : {
+      "patch" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PATCH /markTask"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:markTask/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/updateTaskOrder" : {
+      "patch" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PATCH /updateTaskOrder"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:reorderTasks/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/addTask" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /addTask"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:addTask/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/contact" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /contact"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:sendContactEmail/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/deleteTask" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /deleteTask"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:deleteTask/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/goal" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /goal"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:goalProcessor/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/reindexTasks" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /reindexTasks"
+          }
+        },
+        "security" : [ {
+          "CognitoAuth" : [ ]
+        } ],
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:863518449838:function:reindexTasks/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    }
+  },
+  "components" : {
+    "securitySchemes" : {
+      "CognitoAuth" : {
+        "type" : "oauth2",
+        "flows" : { },
+        "x-amazon-apigateway-authorizer" : {
+          "identitySource" : "$request.header.Authorization",
+          "jwtConfiguration" : {
+            "audience" : [ "bh9ml00dlbibdhhr6hr1q6pvr" ],
+            "issuer" : "https://cognito-idp.us-east-2.amazonaws.com/us-east-2_GLl5VJmRX"
+          },
+          "type" : "jwt"
+        }
+      }
+    }
+  },
+  "x-amazon-apigateway-cors" : {
+    "allowMethods" : [ "DELETE", "GET", "OPTIONS", "PATCH", "POST" ],
+    "allowHeaders" : [ "authorization", "content-type" ],
+    "maxAge" : 0,
+    "allowCredentials" : false,
+    "allowOrigins" : [ "*" ]
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}
